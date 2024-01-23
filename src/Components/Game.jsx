@@ -545,7 +545,7 @@ export default function Game() {
             console.log('sending request B')
             const gameData = toBackendRepr();
             try {
-                const response = await axios.post('https://seid.pythonanywhere.com/gamee/movee/', gameData);
+                const response = await axios.post('http://127.0.0.1:8000/gamee/movee/', gameData);
                 const newMove = response.data;
                 console.log(newMove.move)
                 console.log("Level",gameData.difficulty);
